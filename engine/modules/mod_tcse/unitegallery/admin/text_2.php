@@ -76,7 +76,7 @@ if (!defined('DATALIFEENGINE') || !defined('LOGGED_IN')) {
 
 <h3>Примеры</h3>
 <p>
-	1. В шаблоне полной новости  (<b>fullstory.tpl</b>) в нужном месте добавить код для вывода готовой галереи с id <b>gallery</b>
+	1. В шаблоне полной новости  (<b>fullstory.tpl</b>) в нужном месте добавить код для вывода готовой галереи с id <b>galleryBase</b>
 </p>
 	<code>
 [xfgiven_manyfotos]
