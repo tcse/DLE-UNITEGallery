@@ -65,8 +65,9 @@ if (!defined('DATALIFEENGINE') || !defined('LOGGED_IN')) {
         }); 
         jQuery("#partsGallery").unitegallery({
             gallery_autoplay:true,
+            slider_transition: "slide",
             slider_scale_mode_media: "down",
-            gallery_theme: "carousel"
+            theme_panel_position: "left"
         });
     });  
 &lt;/script>
