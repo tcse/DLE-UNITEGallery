@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <dleplugin>
 	<name>UNITE Gallery by TCSE-cms.com</name>
-	<description>Модуль генерации галереи картинок из допполей</description>
+	<description>Модуль генерации галереи картинок из допполей типа Галерея</description>
 	<icon>engine/skins/images/unitegallery.png</icon>
-	<version>1.5.0</version>
-	<dleversion>15.1</dleversion>
+	<version>1.6.0</version>
+	<dleversion>15.2</dleversion>
 	<versioncompare>greater</versioncompare>
 	<upgradeurl></upgradeurl>
 	<filedelete>0</filedelete>
@@ -20,5 +20,5 @@
 	<phpenable><![CDATA[]]></phpenable>
 	<phpdisable><![CDATA[]]></phpdisable>
 	<phpdelete><![CDATA[]]></phpdelete>
-	<notice><![CDATA[Админка в разделе: [b]Сторонние модули[/b] -> [b]UNITE Gallery by TCSE[/b]]]></notice>
+	<notice><![CDATA[Админка в разделе: [b]Сторонние модули -> UNITE Gallery by TCSE[/b] Версия плагина для DLE 15.2 - 16.0]]></notice>
 </dleplugin>

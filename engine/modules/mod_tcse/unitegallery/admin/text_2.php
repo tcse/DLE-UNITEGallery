@@ -22,14 +22,17 @@ if (!defined('DATALIFEENGINE') || !defined('LOGGED_IN')) {
     	<p>Если Вы используете DLE версии 13.0 - 15.0 то</p>
 	    <p>
 	    	Обязательным условием работы плагина UNITE Gallery и дополнительных полей типа "Галерея" является наличие плагина 
-	    	<a href="https://lazydev.pro/fcode/26-url-xfield-gallery-plugin.html" target="_blank">Ссылки картинок с дополнительного поля типа Галерея <i class="fa fa-external-link"></i></a> от <b>lazydev.pro</b>
+	    	<a href="https://lazydev.pro/fcode/26-url-xfield-gallery-plugin.html" target="_blank">Ссылки картинок с дополнительного поля типа Галерея <i class="fa fa-external-link"></i></a> от <b>lazydev.pro</b>.<br>
+	    	Зеркала плагина <a href="https://github.com/tcse/DLE-Plugins/blob/master/ssylki-kartinok-s-dopolnitelnogo-polja-tipa-galereja-dle-133-.xml" target="_blank">github <i class="fa fa-external-link"></i></a> 
 	    </p>
-	    <p>Для DLE 15.1 дополнительный плагин не требуется! Синтаксис вывода картинок реализуется штатными средствами движка.</p>
+	    <p><br></p>
+	    <p>Для DLE 15.2 дополнительный плагин не требуется! Синтаксис вывода картинок реализуется штатными средствами движка.</p>
     </div>
 
 
 
     <h3>Подключение модуля в шаблон сайта</h3>
+    <img src="https://tcse-cms.com/uploads/posts/2020-10/1603357507_2020-10-22_12-01-57.png" style="max-width: 100%; margin: 20px 0;">
     <p>
 		В главном шаблоне сайта <b>main.tpl</b> перед загрывающим тегом 
 		<code>&lt;/head></code> 
@@ -47,11 +50,16 @@ if (!defined('DATALIFEENGINE') || !defined('LOGGED_IN')) {
 	<code>
 &lt;script src="{THEME}/assets/unitegallery/js/unitegallery.min.js">&lt;/script>
 &lt;script src="{THEME}/assets/unitegallery/themes/grid/ug-theme-grid.js">&lt;/script>
+{* Дополнительные темы внешнего вида галереи *}
+&lt;script src='{THEME}/assets/unitegallery/themes/tilesgrid/ug-theme-tilesgrid.js' type='text/javascript'>&lt;/script>
+&lt;script src='{THEME}/assets/unitegallery/themes/carousel/ug-theme-carousel.js' type='text/javascript'>&lt;/script>
+&lt;script src='{THEME}/assets/unitegallery/themes/tiles/ug-theme-tiles.js' type='text/javascript'>&lt;/script>
 
 {* активация плагина unitegallery *}
 &lt;script type="text/javascript"> 
     jQuery(document).ready(function(){ 
         jQuery("#galleryBase").unitegallery(); 
+
         jQuery("#alterGallery").unitegallery({
             gallery_autoplay:true,
             slider_transition: "slide",
@@ -63,12 +71,22 @@ if (!defined('DATALIFEENGINE') || !defined('LOGGED_IN')) {
             theme_panel_position: "bottom",
             gallery_control_thumbs_mousewheel:true
         }); 
+
         jQuery("#partsGallery").unitegallery({
             gallery_autoplay:true,
             slider_transition: "slide",
             slider_scale_mode_media: "down",
             theme_panel_position: "left"
         });
+        
+        jQuery("#tilesgridGallery").unitegallery({
+            gallery_theme: "tilesgrid"
+        });
+        
+        jQuery("#nestedgallery").unitegallery({
+			gallery_theme: "tiles",
+			tiles_type: "nested"						
+		});
     });  
 &lt;/script>
 	</code>

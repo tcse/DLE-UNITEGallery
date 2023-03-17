@@ -9,7 +9,7 @@ if (!defined('DATALIFEENGINE') || !defined('LOGGED_IN')) {
         <div class="panel-header">
             <ul class="nav nav-tabs nav-tabs-left">
                 <li class="active"><a href="#tabmain" data-toggle="tab">Описание работы модуля</a></li>
-                <li><a href="#tabhelp" data-toggle="tab">Справочная информация</a></li>
+                <li><a href="#tabhelp" data-toggle="tab">Установка плагина в шаблон сайта</a></li>
             </ul>
         </div>
 
